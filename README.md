@@ -16,6 +16,8 @@ The environment structure is as follow:
 
 
 app/
+  
+(You need to create a directory /app in your local harddrive. This is where you will keep your app.py Flask file for development.)  
 
 data/
 
