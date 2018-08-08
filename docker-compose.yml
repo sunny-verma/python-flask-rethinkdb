@@ -3,13 +3,15 @@ flask:
   volumes:
     - app:/app
   links:
-    - mongodb
+    - rethinkdb 
   ports:
     - "5000:5000"
   command: /usr/bin/python /app/app.py
-mongodb:
-  build: Dockerfiles/mongo
+rethinkdb:
+  build: Dockerfiles/rethinkdb
   volumes:
     - data:/data
   ports:
-    - "27017:27017"
+    - "8080:8080"
+    - "28015:28015"
+    - "29015:29015"
